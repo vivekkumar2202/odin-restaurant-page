@@ -3,9 +3,12 @@ import homePageImage from "./pexels-chanwalrus-958545.jpg";
 export function homePage () {
     const content = document.querySelector("#content");
 
+    const parentDiv = document.createElement("div");
+    parentDiv.setAttribute("class", "home");
+
     const heading = document.createElement("h1");
     heading.textContent = "Vivek's Restaurant";
-    content.appendChild(heading);
+    parentDiv.appendChild(heading);
 
     const div = document.createElement("div");
     const firstPara =document.createElement("p");
@@ -20,9 +23,11 @@ export function homePage () {
     finest. Our staff are always there for you and our chefs are well trained for
     all your demands that you might have.`
     div.appendChild(secondPara);
-    content.appendChild(div);
+    parentDiv.appendChild(div);
 
     const image = document.createElement("img");
     image.src = homePageImage;
-    content.appendChild(image);
+    parentDiv.appendChild(image);
+
+    content.appendChild(parentDiv);
 }

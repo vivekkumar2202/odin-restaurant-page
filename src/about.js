@@ -2,6 +2,7 @@ export function aboutPage() {
     const content = document.querySelector("#content");
 
     const div = document.createElement("div");
+    div.setAttribute("class", "about");
 
     const firstPara = document.createElement("p");
     const secondPara = document.createElement("p");
@@ -18,7 +19,7 @@ export function aboutPage() {
     thirdPara.textContent = "Chef - XYZ";
     fourthPara.textContent = "Contact Us";
     fifthPara.textContent = "Mobile no.- 1234567890"
-    sixthPara.textContent = "Email = dontyoydaremailatthismailid@pleasedont.com"
+    sixthPara.textContent = "Email - dontyoydaremailatthismailid@pleasedont.com"
 
     div.appendChild(firstPara);
     div.appendChild(secondPara);

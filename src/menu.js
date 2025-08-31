@@ -7,6 +7,9 @@ import gulabJamun from "./pexels-plantsandgraphics-7449105.jpg";
 export function menuPage () {
     const content = document.querySelector("#content");
 
+    const parentDiv = document.createElement("div");
+    parentDiv.setAttribute("class", "menu");
+
     const firstDiv = document.createElement("div");
     const firstImage = document.createElement("img");
     const firstPara = document.createElement("p");
@@ -59,8 +62,10 @@ export function menuPage () {
     fourthDiv.appendChild(seventhPara);
     fourthDiv.appendChild(eighthPara);
 
-    content.appendChild(firstDiv);
-    content.appendChild(secondDiv);
-    content.appendChild(thirdDiv);
-    content.appendChild(fourthDiv);
+    parentDiv.appendChild(firstDiv);
+    parentDiv.appendChild(secondDiv);
+    parentDiv.appendChild(thirdDiv);
+    parentDiv.appendChild(fourthDiv);
+
+    content.appendChild(parentDiv);
 }
